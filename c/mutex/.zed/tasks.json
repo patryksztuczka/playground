@@ -1,0 +1,6 @@
+[
+  {
+    "label": "Build (C++17)",
+    "command": "clang++ -std=c++17 -pthread main.cpp -o main && ./main"
+  }
+]
