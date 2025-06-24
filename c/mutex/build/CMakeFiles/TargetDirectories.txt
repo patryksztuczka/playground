@@ -1,3 +1,0 @@
-/Users/patryk.sztuczka/Documents/my-projects/playground/c/mutex/build/CMakeFiles/main.dir
-/Users/patryk.sztuczka/Documents/my-projects/playground/c/mutex/build/CMakeFiles/edit_cache.dir
-/Users/patryk.sztuczka/Documents/my-projects/playground/c/mutex/build/CMakeFiles/rebuild_cache.dir
