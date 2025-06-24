@@ -1,0 +1,27 @@
+[
+  {
+    "label": "[opencv-test] Configure (CMake)",
+    "command": "cmake -S $ZED_WORKTREE_ROOT/c/opencv-test -B $ZED_WORKTREE_ROOT/c/opencv-test/build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "[opencv-test] Build",
+    "command": "cmake --build $ZED_WORKTREE_ROOT/c/opencv-test/build",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false
+  },
+  {
+    "label": "[opencv-test] Run",
+    "command": "$ZED_WORKTREE_ROOT/c/opencv-test/build/main",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true
+  },
+  {
+    "label": "[opencv-test] Clear build",
+    "command": "rm -rf $ZED_WORKTREE_ROOT/c/opencv-test/build",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false
+  }
+]

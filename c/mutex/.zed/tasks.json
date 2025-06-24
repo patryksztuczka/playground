@@ -1,12 +1,27 @@
 [
   {
-    "label": "Generate Make file",
-    "command": "cd ./c/mutex/build && cmake ..",
+    "label": "[mutex] Configure (CMake)",
+    "command": "cmake -S $ZED_WORKTREE_ROOT/c/mutex -B $ZED_WORKTREE_ROOT/c/mutex/build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "[mutex] Build",
+    "command": "cmake --build $ZED_WORKTREE_ROOT/c/mutex/build",
+    "cwd": "$ZED_WORKTREE_ROOT",
     "use_new_terminal": false
   },
   {
-    "label": "Build and Run (C++23)",
-    "command": "cd ./c/mutex/build && make && ./main",
+    "label": "[mutex] Run",
+    "command": "$ZED_WORKTREE_ROOT/c/mutex/build/mutex",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true
+  },
+  {
+    "label": "[mutex] Clear build",
+    "command": "rm -rf $ZED_WORKTREE_ROOT/c/mutex/build",
+    "cwd": "$ZED_WORKTREE_ROOT",
     "use_new_terminal": false
   }
 ]

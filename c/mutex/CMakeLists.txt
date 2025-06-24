@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.20)
+
 project(mutex)
 
-add_executable(main main.cpp)
+set(CMAKE_CXX_STANDARD 23)
 
-set(CMAKE_CXX_FLAGS "-std=c++23")
+find_package(Threads REQUIRED)
+add_executable(mutex main.cpp)
+target_link_libraries(mutex PRIVATE Threads::Threads)
