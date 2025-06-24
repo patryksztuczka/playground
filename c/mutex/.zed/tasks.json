@@ -1,6 +1,12 @@
 [
   {
-    "label": "Build (C++17)",
-    "command": "clang++ -std=c++17 -pthread main.cpp -o main && ./main"
+    "label": "Generate Make file",
+    "command": "cd ./c/mutex/build && cmake ..",
+    "use_new_terminal": false
+  },
+  {
+    "label": "Build and Run (C++23)",
+    "command": "cd ./c/mutex/build && make && ./main",
+    "use_new_terminal": false
   }
 ]
